@@ -5,18 +5,19 @@ import { useGlobalContext } from "./context"
 const url = `https://api.unsplash.com/search/photos?client_id=${import.meta.env.VITE_API_KEY}`
 
 const Gallery = () => {
-
+    //get search term from global context
     const {searchTerm} = useGlobalContext()
 
     const response = useQuery({
         queryKey: ['images', searchTerm],
         queryFn: async () => {
             const result = await axios.get(`${url}&query=${searchTerm}`)
-
+            // return result of search term
             return result.data
         }
     })
 
+    //check conditions of responses
     if (response.isLoading) 
     {
         return (

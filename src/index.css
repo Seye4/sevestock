@@ -18,7 +18,7 @@ html {
   --primary-200: #c1beff;
   --primary-300: #a29dff;
   --primary-400: #837dff;
-  --primary-500: #645cff;
+  --primary-500: #ff6500;
   --primary-600: #504acc;
   --primary-700: #3c3799;
   --primary-800: #282566;
@@ -125,28 +125,6 @@ h4 {
 h5 {
   font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
 }
-
-/* BIGGER FONTS */
-/* h1 {
-  font-size: clamp(3rem, 6vw, 6rem);
-}
-
-h2 {
-  font-size: clamp(2.5rem, 5vw, 5rem);
-}
-
-h3 {
-  font-size: clamp(2rem, 4vw, 4rem);
-}
-
-h4 {
-  font-size: clamp(1.5rem, 3vw, 3rem);
-}
-
-h5 {
-  font-size: clamp(1rem, 2vw, 2rem);
-}
- */
 
 .text {
   margin-bottom: 1.5rem;
@@ -295,12 +273,6 @@ ul {
 
 /* 
 ========
-PROJECT CSS
-========
-*/
-
-/* 
-========
 Toggle Container
 ========
 */
@@ -348,13 +320,11 @@ Search Form
   border-color: var(--grey-300);
   transition: var(--darkModeTransition);
   color: var(--textColor);
-  border-radius: 0;
-
-  /* border-right: none; */
+  border-radius: 20px 0 0 20px;
 }
 
 .search-form .btn {
-  border-radius: 0;
+  border-radius: 0 20px 20px 0;
 }
 .search-form .btn:hover {
   background: var(--primary-300);
@@ -377,6 +347,11 @@ Gallery
 
 .image-container .img {
   height: 10rem;
+}
+
+.image-container h4 {
+  text-align: center;
+  grid-column-start: 2;
 }
 
 @media (min-width: 768px) {

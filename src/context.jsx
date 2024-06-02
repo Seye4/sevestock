@@ -23,7 +23,7 @@ export const AppProvider = ({children}) => {
     const [isDarkTheme, setIsDarkTheme] = useState(getInitialDarkMode())
 
     // use state to set default search item
-    const [searchTerm, setSearchTerm] = useState('Goose')
+    const [searchTerm, setSearchTerm] = useState('goose')
 
     //function to toggle dark mode
     const toggleDarkTheme = () => {

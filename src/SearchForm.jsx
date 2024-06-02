@@ -3,15 +3,18 @@ import { useGlobalContext } from './context'
 
 const SearchForm = () => {
 
+    // import setsearch function via globalcontext
     const {setSearchTerm} = useGlobalContext()
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        // get search value from font
         const searchValue = e.target.elements.search.value
 
         if(!searchValue) return
 
-        setSearchTerm({})
+        //process search value via setsearchterm function
+        setSearchTerm(searchValue)
     }
 
   return (
